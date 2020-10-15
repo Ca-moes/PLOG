@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 6.7, http://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>mpg-ref-atom_codes (SICStus Prolog)</title>
+
+<meta name="description" content="mpg-ref-atom_codes (SICStus Prolog)">
+<meta name="keywords" content="mpg-ref-atom_codes (SICStus Prolog)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<link href="index.html" rel="start" title="Top">
+<link href="Predicate-Index.html" rel="index" title="Predicate Index">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="mpg_002dbpr.html" rel="up" title="mpg-bpr">
+<link href="mpg_002dref_002datom_005fconcat.html" rel="next" title="mpg-ref-atom_concat">
+<link href="mpg_002dref_002datom_005fchars.html" rel="prev" title="mpg-ref-atom_chars">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+
+<body lang="en">
+<span id="mpg_002dref_002datom_005fcodes"></span><div class="header">
+<p>
+Next: <a href="mpg_002dref_002datom_005fconcat.html" accesskey="n" rel="next">mpg-ref-atom_concat</a>, Previous: <a href="mpg_002dref_002datom_005fchars.html" accesskey="p" rel="prev">mpg-ref-atom_chars</a>, Up: <a href="mpg_002dbpr.html" accesskey="u" rel="up">mpg-bpr</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Predicate-Index.html" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<span id="atom_005fcodes_002f2---ISO"></span><h4 class="subsection">11.3.17 <code>atom_codes/2</code> &nbsp;<!-- /@w --> <i>ISO</i></h4>
+<span id="index-atom_005fcodes_002f2-_0028built_002din_002c-ref-page_0029-1"></span>
+<span id="index-atom_005fcodes_002f2-_0028built_002din_002c-ref-page_0029"></span>
+
+<span id="Synopsis-42"></span><h4 class="subheading">Synopsis</h4>
+
+<p><code>atom_codes(<var>+Atom</var>, <var>-Codes</var>)</code>
+</p>
+<p><code>atom_codes(<var>-Atom</var>, <var>+Codes</var>)</code>
+</p>
+<p><var>Codes</var> is the <em>codes</em> comprising the printed
+representation of <var>Atom</var>.
+</p>
+<span id="Arguments-39"></span><h4 class="subheading">Arguments</h4>
+<dl compact="compact">
+<dt><var>Codes</var></dt>
+<dd><p><em>codes</em>
+</p>
+<p>The <em>codes</em>
+comprising the printed representation of <var>Atom</var>.
+</p>
+</dd>
+<dt><var>Atom</var></dt>
+<dd><p><em>atom</em>
+</p>
+<p>The atom containing
+exactly those characters, even if the characters look like the printed
+representation of a number.
+</p></dd>
+</dl>
+
+
+<span id="Description-39"></span><h4 class="subheading">Description</h4>
+
+<p>Initially, either <var>Atom</var> must be instantiated to an atom, or
+<var>Codes</var> must be instantiated to a proper <em>codes</em>.
+</p>
+<p>Any atom that can be read or written by Prolog can be constructed
+or decomposed by <code>atom_codes/2</code>.
+</p>
+<span id="Exceptions-33"></span><h4 class="subheading">Exceptions</h4>
+
+<dl compact="compact">
+<dt><code>instantiation_error</code></dt>
+<dd><p><var>Atom</var> is uninstantiated and <var>Codes</var> is not instantiated enough
+</p>
+</dd>
+<dt><code>type_error</code></dt>
+<dd><p><var>Atom</var> is not an atom or
+<var>Codes</var> cannot be unified with a list of integers
+</p>
+</dd>
+<dt><code>representation_error</code></dt>
+<dd><p>An element of <var>Codes</var> is an invalid character code, or
+<var>Codes</var> is a list corresponding to an atom that can&rsquo;t be represented
+</p></dd>
+</dl>
+
+<p>The check of <var>Codes</var> when <var>Atom</var> is instantiated was added in
+release 4.3 for alignment with the ISO Prolog standard. Previous
+releases simply failed in this case instead of reporting an error for
+malformed <var>Codes</var>.
+</p>
+<span id="See-Also-39"></span><h4 class="subheading">See Also</h4>
+
+<p><code>atom_chars/2</code>.
+</p>
+
+
+<div class="logo">
+<a href="https://sicstus.sics.se/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">User's Manual</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/sicstus/mpg_002dref_002datom_005fcodes.html&amp;body=Feedback%20on%20documentation%20node%20html/sicstus/mpg_002dref_002datom_005fcodes.html%20in%20User's%20Manual.">Send feedback on this subject.</a>
+</body>
+</html>

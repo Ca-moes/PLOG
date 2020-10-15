@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 6.7, http://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>ref-mod-ilm-def (SICStus Prolog)</title>
+
+<meta name="description" content="ref-mod-ilm-def (SICStus Prolog)">
+<meta name="keywords" content="ref-mod-ilm-def (SICStus Prolog)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<link href="index.html" rel="start" title="Top">
+<link href="Predicate-Index.html" rel="index" title="Predicate Index">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="ref_002dmod_002dilm.html" rel="up" title="ref-mod-ilm">
+<link href="ref_002dmod_002dilm_002dvis.html" rel="next" title="ref-mod-ilm-vis">
+<link href="ref_002dmod_002dilm.html" rel="prev" title="ref-mod-ilm">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+
+<body lang="en">
+<span id="ref_002dmod_002dilm_002ddef"></span><div class="header">
+<p>
+Next: <a href="ref_002dmod_002dilm_002dvis.html" accesskey="n" rel="next">ref-mod-ilm-vis</a>, Up: <a href="ref_002dmod_002dilm.html" accesskey="u" rel="up">ref-mod-ilm</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Predicate-Index.html" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<span id="Predicates-Defined-in-a-Module"></span><h4 class="subsubsection">4.11.13.1 Predicates Defined in a Module</h4>
+
+<span id="index-modules_002c-predicates-defined-in"></span>
+<span id="index-predicates-defined-in-modules"></span>
+
+
+<p>The built-in predicate <code>current_predicate/2</code> can be used to find
+the predicates that are defined in a particular module.
+</p>
+<p>To backtrack through all of the predicates defined in module <code>m</code>, use
+</p>
+<span id="index-current_005fpredicate_002f2-_0028built_002din_0029-1"></span>
+<span id="index-current_005fpredicate_002f2-_0028built_002din_0029"></span>
+
+
+<div class="example">
+<pre class="example">| ?- <kbd>current_predicate(_, m:Goal).</kbd>
+</pre></div>
+
+
+<span id="index-modules_002c-predicates-exported-from"></span>
+<span id="index-predicates-exported-from-modules"></span>
+
+<p>To backtrack through <em>all</em> predicates defined in <em>any</em> module, use
+</p><div class="example">
+<pre class="example">| ?- <kbd>current_predicate(_, M:Goal).</kbd>
+</pre></div>
+
+<p>This succeeds once for every predicate in your program.
+See <a href="mpg_002dref_002dcurrent_005fpredicate.html">mpg-ref-current_predicate</a>.
+</p>
+
+
+
+<div class="logo">
+<a href="https://sicstus.sics.se/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">User's Manual</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/sicstus/ref_002dmod_002dilm_002ddef.html&amp;body=Feedback%20on%20documentation%20node%20html/sicstus/ref_002dmod_002dilm_002ddef.html%20in%20User's%20Manual.">Send feedback on this subject.</a>
+</body>
+</html>

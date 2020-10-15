@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 6.7, http://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>mpg-ref-atom_concat (SICStus Prolog)</title>
+
+<meta name="description" content="mpg-ref-atom_concat (SICStus Prolog)">
+<meta name="keywords" content="mpg-ref-atom_concat (SICStus Prolog)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<link href="index.html" rel="start" title="Top">
+<link href="Predicate-Index.html" rel="index" title="Predicate Index">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="mpg_002dbpr.html" rel="up" title="mpg-bpr">
+<link href="mpg_002dref_002datom_005flength.html" rel="next" title="mpg-ref-atom_length">
+<link href="mpg_002dref_002datom_005fcodes.html" rel="prev" title="mpg-ref-atom_codes">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+
+<body lang="en">
+<span id="mpg_002dref_002datom_005fconcat"></span><div class="header">
+<p>
+Next: <a href="mpg_002dref_002datom_005flength.html" accesskey="n" rel="next">mpg-ref-atom_length</a>, Previous: <a href="mpg_002dref_002datom_005fcodes.html" accesskey="p" rel="prev">mpg-ref-atom_codes</a>, Up: <a href="mpg_002dbpr.html" accesskey="u" rel="up">mpg-bpr</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Predicate-Index.html" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<span id="atom_005fconcat_002f3---ISO"></span><h4 class="subsection">11.3.18 <code>atom_concat/3</code> &nbsp;<!-- /@w --> <i>ISO</i></h4>
+<span id="index-atom_005fconcat_002f3-_0028built_002din_002c-ref-page_0029-1"></span>
+<span id="index-atom_005fconcat_002f3-_0028built_002din_002c-ref-page_0029"></span>
+
+<span id="Synopsis-43"></span><h4 class="subheading">Synopsis</h4>
+
+<p><code>atom_concat(<var>+Atom1</var>,<var>+Atom2</var>,<var>-Atom12</var>)</code>
+</p>
+<p><code>atom_concat(<var>-Atom1</var>,<var>-Atom2</var>,<var>+Atom12</var>)</code>
+</p>
+<p>The characters of the atom <var>Atom1</var> concatenated with those of
+<var>Atom2</var> are the same as the characters of atom <var>Atom12</var>.
+</p>
+<span id="Arguments-40"></span><h4 class="subheading">Arguments</h4>
+<dl compact="compact">
+<dt><var>Atom1</var></dt>
+<dd><p><em>atom</em>
+</p>
+</dd>
+<dt><var>Atom2</var></dt>
+<dd><p><em>atom</em>
+</p>
+</dd>
+<dt><var>Atom12</var></dt>
+<dd><p><em>atom</em>
+</p></dd>
+</dl>
+
+<span id="Description-40"></span><h4 class="subheading">Description</h4>
+
+<p>Initially, either both <var>Atom1</var> and <var>Atom2</var>, or <var>Atom12</var>,
+must be instantiated to atoms.  If only <var>Atom12</var> is instantiated, then 
+nondeterminately enumerates all possible atom-pairs that concatenate
+to the given atom, e.g.:
+</p>
+<div class="example">
+<pre class="example">| ?- <kbd>atom_concat(A, B, 'ab').</kbd>
+
+A = '',
+B = ab ? <kbd>;</kbd>
+
+A = a,
+B = b ? <kbd>;</kbd>
+
+A = ab,
+B = ''  <kbd>;</kbd>
+
+no
+</pre></div>
+
+<span id="Exceptions-34"></span><h4 class="subheading">Exceptions</h4>
+
+<dl compact="compact">
+<dt><code>instantiation_error</code></dt>
+<dd><p>More than one argument uninstantiated.
+</p>
+</dd>
+<dt><code>type_error</code></dt>
+<dd><p>An instantiated argument is not an atom.
+</p>
+</dd>
+<dt><code>representation_error</code></dt>
+<dd><p><var>Atom12</var> is too long to be represented.
+</p>
+</dd>
+</dl>
+
+<span id="See-Also-40"></span><h4 class="subheading">See Also</h4>
+
+<p><code>atom_length/2</code>, <code>sub_atom/5</code>.
+</p>
+
+
+<div class="logo">
+<a href="https://sicstus.sics.se/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">User's Manual</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/sicstus/mpg_002dref_002datom_005fconcat.html&amp;body=Feedback%20on%20documentation%20node%20html/sicstus/mpg_002dref_002datom_005fconcat.html%20in%20User's%20Manual.">Send feedback on this subject.</a>
+</body>
+</html>

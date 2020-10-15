@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 6.7, http://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>mpg-ref-unknown_predicate_handler (SICStus Prolog)</title>
+
+<meta name="description" content="mpg-ref-unknown_predicate_handler (SICStus Prolog)">
+<meta name="keywords" content="mpg-ref-unknown_predicate_handler (SICStus Prolog)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<link href="index.html" rel="start" title="Top">
+<link href="Predicate-Index.html" rel="index" title="Predicate Index">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="mpg_002dbpr.html" rel="up" title="mpg-bpr">
+<link href="mpg_002dref_002dunload_005fforeign_005fresource.html" rel="next" title="mpg-ref-unload_foreign_resource">
+<link href="mpg_002dref_002dunknown.html" rel="prev" title="mpg-ref-unknown">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+
+<body lang="en">
+<span id="mpg_002dref_002dunknown_005fpredicate_005fhandler"></span><div class="header">
+<p>
+Next: <a href="mpg_002dref_002dunload_005fforeign_005fresource.html" accesskey="n" rel="next">mpg-ref-unload_foreign_resource</a>, Previous: <a href="mpg_002dref_002dunknown.html" accesskey="p" rel="prev">mpg-ref-unknown</a>, Up: <a href="mpg_002dbpr.html" accesskey="u" rel="up">mpg-bpr</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Predicate-Index.html" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<span id="unknown_005fpredicate_005fhandler_002f3---hook"></span><h4 class="subsection">11.3.244 <code>unknown_predicate_handler/3</code> &nbsp;<!-- /@w --> <i>hook</i></h4>
+<span id="index-unknown_005fpredicate_005fhandler_002f3-_0028hook_002c-ref-page_0029-1"></span>
+<span id="index-unknown_005fpredicate_005fhandler_002f3-_0028hook_002c-ref-page_0029"></span>
+
+<span id="Synopsis-269"></span><h4 class="subheading">Synopsis</h4>
+
+<p><code>:- multifile user:unknown_predicate_handler/3.</code>
+</p>
+<p><code>user:unknown_predicate_handler(<var>+Goal</var>, <var>+Module</var>, <var>-NewGoal</var>)</code>
+</p>
+<p>User definable hook to trap calls to unknown predicates.
+</p>
+<span id="index-undefined-predicate-2"></span>
+<span id="index-predicate_002c-undefined-2"></span>
+
+<span id="Arguments-246"></span><h4 class="subheading">Arguments</h4>
+<dl compact="compact">
+<dt><var>Goal</var></dt>
+<dd><p><em>callable</em>
+</p>
+<p>The goal to trap.
+</p>
+</dd>
+<dt><var>Module</var></dt>
+<dd><p><em>atom</em>
+</p>
+<p>Any atom that is a current module
+</p>
+</dd>
+<dt><var>NewGoal</var></dt>
+<dd><p><em>callable</em>
+</p>
+<p>The goal to call instead.
+</p></dd>
+</dl>
+
+<span id="Description-184"></span><h4 class="subheading">Description</h4>
+
+<p>When Prolog comes across a call to an unknown predicate, Prolog makes
+a call to <code>user:unknown_predicate_handler/3</code> with the first two
+arguments bound. <var>Goal</var> is bound to the call to the undefined
+predicate and <var>Module</var> is the module in which that predicate is
+supposed to be defined. If the call to
+<code>user:unknown_predicate_handler/3</code> succeeds, then Prolog replaces
+the call to the undefined predicate with the call to
+<var>Module:NewGoal</var>. Otherwise, the action taken is governed by the
+<code>unknown</code> Prolog flag.
+<span id="index-unknown-_0028prolog-flag_0029-4"></span>
+</p>
+<span id="Exceptions-260"></span><h4 class="subheading">Exceptions</h4>
+
+<p>Exceptions are treated as failures, except an error message is printed.
+</p>
+<span id="Examples-96"></span><h4 class="subheading">Examples</h4>
+
+<p>The following clause gives the
+same behavior as setting <code>unknown(_,fail)</code>:
+</p>
+<div class="example">
+<pre class="example">unknown_predicate_handler(_, _, fail).
+</pre></div>
+
+
+<p>The following clause causes calls to undefined predicates whose names
+begin with &lsquo;<samp>xyz_</samp>&rsquo; in module <code>m</code> to be trapped to
+<code>my_handler/1</code> in module <code>n</code>.  Predicates with names not
+beginning with this character sequence are not affected.
+</p>
+<div class="example">
+<pre class="example">unknown_predicate_handler(G, m, n:my_handler(G)) :-
+    functor(G,N,_),
+    atom_concat(xyz_, _, N).
+</pre></div>
+
+<span id="See-Also-266"></span><h4 class="subheading">See Also</h4>
+
+<p><a href="Undefined-Predicates.html">Undefined Predicates</a>, <a href="ref_002dere.html">ref-ere</a>, <a href="ref_002dlps_002dflg.html">ref-lps-flg</a>.
+</p>
+
+
+<div class="logo">
+<a href="https://sicstus.sics.se/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">User's Manual</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/sicstus/mpg_002dref_002dunknown_005fpredicate_005fhandler.html&amp;body=Feedback%20on%20documentation%20node%20html/sicstus/mpg_002dref_002dunknown_005fpredicate_005fhandler.html%20in%20User's%20Manual.">Send feedback on this subject.</a>
+</body>
+</html>

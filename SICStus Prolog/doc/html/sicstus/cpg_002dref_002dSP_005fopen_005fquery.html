@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 6.7, http://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>cpg-ref-SP_open_query (SICStus Prolog)</title>
+
+<meta name="description" content="cpg-ref-SP_open_query (SICStus Prolog)">
+<meta name="keywords" content="cpg-ref-SP_open_query (SICStus Prolog)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<link href="index.html" rel="start" title="Top">
+<link href="Predicate-Index.html" rel="index" title="Predicate Index">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="cpg_002dbif.html" rel="up" title="cpg-bif">
+<link href="cpg_002dref_002dSP_005fpred.html" rel="next" title="cpg-ref-SP_pred">
+<link href="cpg_002dref_002dSP_005fnext_005fstream.html" rel="prev" title="cpg-ref-SP_next_stream">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+
+<body lang="en">
+<span id="cpg_002dref_002dSP_005fopen_005fquery"></span><div class="header">
+<p>
+Next: <a href="cpg_002dref_002dSP_005fpred.html" accesskey="n" rel="next">cpg-ref-SP_pred</a>, Previous: <a href="cpg_002dref_002dSP_005fnext_005fstream.html" accesskey="p" rel="prev">cpg-ref-SP_next_stream</a>, Up: <a href="cpg_002dbif.html" accesskey="u" rel="up">cpg-bif</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Predicate-Index.html" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<span id="SP_005fopen_005fquery_0028_0029"></span><h4 class="subsection">12.3.61 <code>SP_open_query()</code></h4>
+<span id="index-SP_005fopen_005fquery_0028_0029-_0028C-function_0029-1"></span>
+
+<span id="Synopsis-341"></span><h4 class="subheading">Synopsis</h4>
+
+<div class="example">
+<pre class="example">#include &lt;sicstus/sicstus.h&gt;
+
+SP_qid
+SP_open_query(SP_pred_ref predicate,
+              SP_term_ref arg1,
+              &hellip;);
+</pre></div>
+
+<p>Sets up a query for use by <code>SP_next_solution()</code>, <code>SP_close_query()</code>, <code>SP_cut_query()</code>.
+</p>
+<span id="index-SP_005fqid-_0028C-type_0029-4"></span>
+
+<span id="Arguments-311"></span><h4 class="subheading">Arguments</h4>
+<dl compact="compact">
+<dt><var>predicate</var></dt>
+<dd><p>The predicate to call.
+</p>
+</dd>
+<dt><var>arg1...</var></dt>
+<dd><p>The arguments to pass.
+</p></dd>
+</dl>
+
+<span id="Return-Value-57"></span><h4 class="subheading">Return Value</h4>
+
+<p>The query identifier if successful, otherwise 0,
+</p>
+<span id="Description-210"></span><h4 class="subheading">Description</h4>
+
+<p>Note that if a new query is opened while another is already open, the
+new query must be terminated before exploring the solutions of the old
+one.  That is, queries must be strictly nested.
+</p>
+<span id="See-Also-338"></span><h4 class="subheading">See Also</h4>
+
+<p><a href="Finding-Multiple-Solutions-of-a-Call.html">Finding Multiple Solutions of a Call</a>.
+</p>
+
+
+<div class="logo">
+<a href="https://sicstus.sics.se/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">User's Manual</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/sicstus/cpg_002dref_002dSP_005fopen_005fquery.html&amp;body=Feedback%20on%20documentation%20node%20html/sicstus/cpg_002dref_002dSP_005fopen_005fquery.html%20in%20User's%20Manual.">Send feedback on this subject.</a>
+</body>
+</html>

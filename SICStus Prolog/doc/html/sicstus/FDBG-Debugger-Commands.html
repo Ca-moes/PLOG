@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 6.7, http://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>FDBG Debugger Commands (SICStus Prolog)</title>
+
+<meta name="description" content="FDBG Debugger Commands (SICStus Prolog)">
+<meta name="keywords" content="FDBG Debugger Commands (SICStus Prolog)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<link href="index.html" rel="start" title="Top">
+<link href="Predicate-Index.html" rel="index" title="Predicate Index">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="FDBG-Basics.html" rel="up" title="FDBG Basics">
+<link href="FDBG-Annotation.html" rel="next" title="FDBG Annotation">
+<link href="FDBG-Built_002dIn-Visualizers.html" rel="prev" title="FDBG Built-In Visualizers">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+
+<body lang="en">
+<span id="FDBG-Debugger-Commands"></span><div class="header">
+<p>
+Next: <a href="FDBG-Annotation.html" accesskey="n" rel="next">FDBG Annotation</a>, Previous: <a href="FDBG-Built_002dIn-Visualizers.html" accesskey="p" rel="prev">FDBG Built-In Visualizers</a>, Up: <a href="FDBG-Basics.html" accesskey="u" rel="up">FDBG Basics</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Predicate-Index.html" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<span id="New-Debugger-Commands"></span><h4 class="subsubsection">10.15.3.4 New Debugger Commands</h4>
+<p>The Prolog debugger is extended by FDBG.
+The <kbd>&amp;</kbd> debugger is modified, and two new commands are added:
+</p>
+<dl compact="compact">
+<dd><span id="index-blocked-goals-_0028debugger-command_0029-1"></span>
+<span id="index-_0026-_0028debugger-command_0029-1"></span>
+</dd>
+<dt><kbd>&amp;</kbd></dt>
+<dt><kbd>&amp; <var>N</var></kbd></dt>
+<dd><p>This debugger command is extended so that the annotated form of domain
+variables is also printed when listing the variables with
+blocked goals.
+</p>
+<span id="index-annotate-goal-_0028debugger-command_0029"></span>
+<span id="index-A-_0028debugger-command_0029"></span>
+</dd>
+<dt><kbd>A</kbd></dt>
+<dt><kbd>A <var>Selector</var></kbd></dt>
+<dd><p>Annotates and prints the current goal and a legend of the
+variables appearing in it.  If a selector is specified, then the
+subterm specified by it is assumed to be an action list, and
+is taken into account when displaying the legend.  For example:
+</p>
+<div class="example">
+<pre class="example">23  2 Exit: clpfd:dispatch_global_fast(no_threat(2,_1001,1),0,0,
+            [exit,_1001 in_set[[3|3]]]) ? <kbd>A [2,4]</kbd>
+
+clpfd:dispatch_global_fast(no_threat(2,&lt;board_2&gt;,1),0,0,
+                           [exit,&lt;board_2&gt; in_set[[3|3]]])
+    board_2 = 1..4 -&gt; {3}
+    Constraint exited.
+</pre></div>
+
+<span id="index-name-variable-_0028debugger-command_0029"></span>
+<span id="index-W-_0028debugger-command_0029"></span>
+</dd>
+<dt><kbd>W <var>Name</var>=<var>Selector</var></kbd></dt>
+<dd><p>Assigns the atom <var>Name</var> to the variable specified by the
+<var>Selector</var>.  For example:
+</p>
+<div class="example">
+<pre class="example">7      15 Call: bar(4, [_101,_102,_103]) ? <kbd>W foo=[2,#2]</kbd>
+</pre></div>
+
+<p>This would assign the name <code>foo</code> to <code>_102</code>, being the second
+element of the second argument of the current goal.
+</p></dd>
+</dl>
+
+
+
+
+<div class="logo">
+<a href="https://sicstus.sics.se/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">User's Manual</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/sicstus/FDBG-Debugger-Commands.html&amp;body=Feedback%20on%20documentation%20node%20html/sicstus/FDBG-Debugger-Commands.html%20in%20User's%20Manual.">Send feedback on this subject.</a>
+</body>
+</html>

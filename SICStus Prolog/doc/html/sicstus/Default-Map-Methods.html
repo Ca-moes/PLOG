@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 6.7, http://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Default Map Methods (SICStus Prolog)</title>
+
+<meta name="description" content="Default Map Methods (SICStus Prolog)">
+<meta name="keywords" content="Default Map Methods (SICStus Prolog)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<link href="index.html" rel="start" title="Top">
+<link href="Predicate-Index.html" rel="index" title="Predicate Index">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="Query-Processing.html" rel="up" title="Query Processing">
+<link href="Default-Query-Classes.html" rel="next" title="Default Query Classes">
+<link href="Default-Input-Methods.html" rel="prev" title="Default Input Methods">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+
+<body lang="en">
+<span id="Default-Map-Methods"></span><div class="header">
+<p>
+Next: <a href="Default-Query-Classes.html" accesskey="n" rel="next">Default Query Classes</a>, Previous: <a href="Default-Input-Methods.html" accesskey="p" rel="prev">Default Input Methods</a>, Up: <a href="Query-Processing.html" accesskey="u" rel="up">Query Processing</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Predicate-Index.html" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<span id="Default-Map-Methods-1"></span><h4 class="subsubsection">4.16.3.5 Default Map Methods</h4>
+
+<p>The following <var>MapMethod</var> types are known to
+<code>'SU_messages':query_map(<var>MapMethod</var>, <var>RawInput</var>,
+<var>Result</var>, <var>Answer</var>)</code> and to the built-in fall-back mapping:
+</p>
+<dl compact="compact">
+<dt><code>char(<var>Pairs</var>)</code></dt>
+<dd><span id="index-char_002f1-_0028map-method_0029"></span>
+<p>In this map method <var>RawInput</var> is assumed to be a code list.
+</p>
+<p><var>Pairs</var> is a list of <code><var>Name</var>-<var>Abbreviations</var></code>
+pairs, where <var>Name</var> is a ground term, and
+<var>Abbreviations</var> is a code list.  The first non-whitespace
+character of <var>RawInput</var> is used for finding the corresponding name
+as the answer, by looking it up in the abbreviation lists.  If the
+character is found, then <var>Result</var> is <code>success</code>, and
+<var>Answer</var> is set to the <var>Name</var> found; otherwise, <var>Result</var> is
+<code>failure</code>.
+</p>
+</dd>
+<dt><code>=</code></dt>
+<dd><span id="index-_003d_002f0-_0028map-method_0029"></span>
+<p>No conversion is done, <var>Answer</var> is equal to <var>RawInput</var> and
+<var>Result</var> is <code>success</code>.  
+</p>
+</dd>
+<dt><code>debugger</code></dt>
+<dd><span id="index-debugger_002f0-_0028map-method_0029"></span>
+<p>This map method is used when reading a single line debugger command.  It
+parses the debugger command and returns the corresponding abstract
+command term.  If the parse is unsuccessful, then the answer
+<code>unknown(Line,Warning)</code> is returned.  This is to allow the user to
+extend the debugger command language via <code>debugger_command_hook/2</code>,
+see <a href="Debug-Commands.html">Debug Commands</a>.
+</p>
+<p>The details of this mapping can be obtained from the
+<samp>library('SU_messages')</samp> file.
+</p>
+<p>Note that the fall-back version of this mapping is simplified, it only
+accepts parameterless debugger commands.
+</p></dd>
+</dl>
+
+
+
+
+<div class="logo">
+<a href="https://sicstus.sics.se/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">User's Manual</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/sicstus/Default-Map-Methods.html&amp;body=Feedback%20on%20documentation%20node%20html/sicstus/Default-Map-Methods.html%20in%20User's%20Manual.">Send feedback on this subject.</a>
+</body>
+</html>

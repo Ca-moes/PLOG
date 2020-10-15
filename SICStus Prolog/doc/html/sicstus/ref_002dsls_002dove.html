@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 6.7, http://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>ref-sls-ove (SICStus Prolog)</title>
+
+<meta name="description" content="ref-sls-ove (SICStus Prolog)">
+<meta name="keywords" content="ref-sls-ove (SICStus Prolog)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<link href="index.html" rel="start" title="Top">
+<link href="Predicate-Index.html" rel="index" title="Predicate Index">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="ref_002dsls.html" rel="up" title="ref-sls">
+<link href="ref_002dsls_002dsst.html" rel="next" title="ref-sls-sst">
+<link href="ref_002dsls.html" rel="prev" title="ref-sls">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+
+<body lang="en">
+<span id="ref_002dsls_002dove"></span><div class="header">
+<p>
+Next: <a href="ref_002dsls_002dsst.html" accesskey="n" rel="next">ref-sls-sst</a>, Up: <a href="ref_002dsls.html" accesskey="u" rel="up">ref-sls</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Predicate-Index.html" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<span id="Overview-of-PO-Files"></span><h4 class="subsection">4.4.1 Overview of PO Files</h4>
+
+<span id="index-PO-files"></span>
+
+<span id="index-database_002c-loading"></span>
+<span id="index-loading-database"></span>
+<span id="index-database_002c-saving"></span>
+<span id="index-saving-database"></span>
+
+<p>A <em>PO file</em> (Prolog object file) contains a binary representation
+of a set of modules, predicates, clauses and directives.  They are
+portable between different platforms, except between 32-bit and 64-bit
+platforms.
+</p>
+<p>PO files are created by <code>save_files/2</code>,
+<code>save_modules/2</code>, and <code>save_predicates/2</code>, which all save a
+selected set of code and data from the running application. They can
+be loaded by the predicates described in <a href="ref_002dlod.html">ref-lod</a>.
+</p>
+<p>PO files provide tremendous flexibility that can be used for many
+purposes, for example:
+</p>
+<ul>
+<li> precompiling Prolog libraries for fast loading;
+</li><li> packaging Prolog code for distribution;
+</li><li> generating precompiled databases of application data;
+</li><li> selectively loading particular application databases (and rule bases);
+</li><li> saving Prolog data across application runs;
+</li><li> building and saving new application databases from within applications;
+</li></ul>
+
+
+<p>The facilities for saving and loading PO files are more than just
+a convenience when developing programs; they are also a powerful
+tool that can be used as part of the application itself.
+</p>
+
+
+
+<div class="logo">
+<a href="https://sicstus.sics.se/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">User's Manual</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/sicstus/ref_002dsls_002dove.html&amp;body=Feedback%20on%20documentation%20node%20html/sicstus/ref_002dsls_002dove.html%20in%20User's%20Manual.">Send feedback on this subject.</a>
+</body>
+</html>

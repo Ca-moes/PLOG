@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 6.7, http://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Discontiguous Declarations (SICStus Prolog)</title>
+
+<meta name="description" content="Discontiguous Declarations (SICStus Prolog)">
+<meta name="keywords" content="Discontiguous Declarations (SICStus Prolog)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<link href="index.html" rel="start" title="Top">
+<link href="Predicate-Index.html" rel="index" title="Predicate Index">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="ref_002dlod_002ddcl.html" rel="up" title="ref-lod-dcl">
+<link href="Block-Declarations.html" rel="next" title="Block Declarations">
+<link href="Volatile-Declarations.html" rel="prev" title="Volatile Declarations">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+
+<body lang="en">
+<span id="Discontiguous-Declarations"></span><div class="header">
+<p>
+Next: <a href="Block-Declarations.html" accesskey="n" rel="next">Block Declarations</a>, Previous: <a href="Volatile-Declarations.html" accesskey="p" rel="prev">Volatile Declarations</a>, Up: <a href="ref_002dlod_002ddcl.html" accesskey="u" rel="up">ref-lod-dcl</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Predicate-Index.html" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<span id="Discontiguous-Declarations-1"></span><h4 class="subsubsection">4.3.4.4 Discontiguous Declarations</h4>
+<span id="index-discontiguous-declaration"></span>
+<span id="index-declaration_002c-discontiguous"></span>
+
+<span id="index-discontiguous_002f1-_0028declaration_0029-1"></span>
+<span id="index-discontiguous_002f1-_0028declaration_0029"></span>
+
+
+<p>By default, the development system issues warnings if it encounters
+clauses that are not together for some predicate. A declaration:
+</p>
+<div class="example">
+<pre class="example">:- discontiguous <var>:PredSpec</var>, &hellip;, <var>:PredSpec</var>.  <!-- /@w --> <i>ISO</i>
+</pre></div>
+
+<p>disables such warnings for the predicates specified by each
+<var>PredSpec</var>.  The warnings can also be disabled globally by setting
+the <code>discontiguous_warnings</code> flag to <code>off</code>.
+<span id="index-discontiguous_005fwarnings-_0028prolog-flag_0029-1"></span>
+See <a href="mpg_002dref_002ddiscontiguous.html">mpg-ref-discontiguous</a>.
+</p>
+
+
+
+<div class="logo">
+<a href="https://sicstus.sics.se/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">User's Manual</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/sicstus/Discontiguous-Declarations.html&amp;body=Feedback%20on%20documentation%20node%20html/sicstus/Discontiguous-Declarations.html%20in%20User's%20Manual.">Send feedback on this subject.</a>
+</body>
+</html>

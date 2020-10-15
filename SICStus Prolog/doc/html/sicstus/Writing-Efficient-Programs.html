@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 6.7, http://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Writing Efficient Programs (SICStus Prolog)</title>
+
+<meta name="description" content="Writing Efficient Programs (SICStus Prolog)">
+<meta name="keywords" content="Writing Efficient Programs (SICStus Prolog)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<link href="index.html" rel="start" title="Top">
+<link href="Predicate-Index.html" rel="index" title="Predicate Index">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="index.html" rel="up" title="Top">
+<link href="Eff-Overview.html" rel="next" title="Eff Overview">
+<link href="Threads.html" rel="prev" title="Threads">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+
+<body lang="en">
+<span id="Writing-Efficient-Programs"></span><div class="header">
+<p>
+Next: <a href="The-Prolog-Library.html" accesskey="n" rel="next">The Prolog Library</a>, Previous: <a href="Multiple-SICStus-Runtimes.html" accesskey="p" rel="prev">Multiple SICStus Runtimes</a>, Up: <a href="index.html" accesskey="u" rel="up">Top</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Predicate-Index.html" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<span id="Writing-Efficient-Programs-1"></span><h2 class="chapter">9 Writing Efficient Programs</h2>
+<span id="index-efficiency_002c-increasing"></span>
+<span id="index-increasing-efficiency"></span>
+
+<a name="Menu"></a>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="Eff-Overview.html" accesskey="1">Eff Overview</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Overview
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Execution-Profiling.html" accesskey="2">Execution Profiling</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Execution Profiling
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Coverage-Analysis.html" accesskey="3">Coverage Analysis</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Coverage Analysis
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="The-Cut.html" accesskey="4">The Cut</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">The Cut
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Indexing.html" accesskey="5">Indexing</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Indexing
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Last-Clause-Determinacy-Detection.html" accesskey="6">Last Clause Determinacy Detection</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Last Clause Determinacy Detection
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="The-Determinacy-Checker.html" accesskey="7">The Determinacy Checker</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">The Determinacy Checker
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Last-Call-Optimization.html" accesskey="8">Last Call Optimization</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Last Call Optimization
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Building-and-Dismantling-Terms.html" accesskey="9">Building and Dismantling Terms</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Building and Dismantling Terms
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Conditionals-and-Disjunction.html">Conditionals and Disjunction</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Conditionals and Disjunction
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Programming-Examples.html">Programming Examples</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Programming Examples
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="The-Cross_002dReferencer.html">The Cross-Referencer</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">The Cross-Referencer
+</td></tr>
+</table>
+
+
+
+
+<div class="logo">
+<a href="https://sicstus.sics.se/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">User's Manual</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+<li><a href="#Menu">Node Menu</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/sicstus/Writing-Efficient-Programs.html&amp;body=Feedback%20on%20documentation%20node%20html/sicstus/Writing-Efficient-Programs.html%20in%20User's%20Manual.">Send feedback on this subject.</a>
+</body>
+</html>

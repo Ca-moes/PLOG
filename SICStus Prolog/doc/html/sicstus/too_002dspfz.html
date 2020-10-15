@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 6.7, http://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>too-spfz (SICStus Prolog)</title>
+
+<meta name="description" content="too-spfz (SICStus Prolog)">
+<meta name="keywords" content="too-spfz (SICStus Prolog)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<link href="index.html" rel="start" title="Top">
+<link href="Predicate-Index.html" rel="index" title="Predicate Index">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="Command-Reference-Pages.html" rel="up" title="Command Reference Pages">
+<link href="too_002dspdet.html" rel="next" title="too-spdet">
+<link href="too_002dmzn_002dsicstus.html" rel="prev" title="too-mzn-sicstus">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+
+<body lang="en">
+<span id="too_002dspfz"></span><div class="header">
+<p>
+Next: <a href="too_002dspdet.html" accesskey="n" rel="next">too-spdet</a>, Previous: <a href="too_002dmzn_002dsicstus.html" accesskey="p" rel="prev">too-mzn-sicstus</a>, Up: <a href="Command-Reference-Pages.html" accesskey="u" rel="up">Command Reference Pages</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Predicate-Index.html" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<span id="spfz-_002d_002d_002d-FlatZinc-Interpreter"></span><h3 class="section">13.3 <code>spfz</code> &mdash; FlatZinc Interpreter</h3>
+
+
+<span id="index-spfz_00281_0029-_0028command-line-tool_0029"></span>
+
+<span id="Synopsis-390"></span><h4 class="subheading">Synopsis</h4>
+
+<div class="example">
+<pre class="example">% <kbd>spfz [-help | --help | -?] [--version] [-a] [-f] [-n <var>N</var>] [-o <var>ofile</var>] [-p <var>P</var>] [-r <var>R</var>] [-s] [-t <var>T</var>] [-time <var>T</var>] [-search <var>S</var>] [-s]</kbd> <var>fznfile</var>
+</pre></div>
+
+<span id="Description-228"></span><h4 class="subheading">Description</h4>
+
+<p>This tool interprets the FlatZinc (&lsquo;<samp>.fzn</samp>&rsquo;) file <var>fznfile</var> with
+options taken from the command line.
+</p>
+<span id="Options-4"></span><h4 class="subheading">Options</h4>
+
+<dl compact="compact">
+<dt><samp>-help, --help, -?</samp></dt>
+<dd><p>print help message
+</p></dd>
+<dt><samp>--version</samp></dt>
+<dd><p>print version
+</p></dd>
+<dt><samp>-a</samp></dt>
+<dd><p>return all solutions (equal to <samp>-n 0</samp>)
+</p></dd>
+<dt><samp>-f</samp></dt>
+<dd><p>solver is free to ignore search strategy (does nothing)
+</p></dd>
+<dt><samp>-n <var>N</var></samp></dt>
+<dd><p>number of solutions (0 = all) (default: 1)
+</p></dd>
+<dt><samp>-o <var>ofile</var></samp></dt>
+<dd><p>file to send output to (default: standard output stream)
+</p></dd>
+<dt><samp>-p <var>P</var></samp></dt>
+<dd><p>number of cores available (does nothing)
+</p></dd>
+<dt><samp>-r <var>R</var></samp></dt>
+<dd><p>random seed
+</p></dd>
+<dt><samp>-s</samp></dt>
+<dd><p>emit statistics
+</p></dd>
+<dt><samp>-t, -time <var>T</var></samp></dt>
+<dd><p>time (in ms) cutoff (default: no cutoff)
+</p></dd>
+<dt><samp>-search <var>S</var></samp></dt>
+<dd><p>optimization method is <var>S</var>, one of <code>bab</code> (the default) and <code>restart</code>
+</p></dd>
+</dl>
+
+<span id="See-Also-387"></span><h4 class="subheading">See Also</h4>
+
+<p><a href="lib_002dzinc.html">lib-zinc</a>.
+</p>
+
+
+
+
+<div class="logo">
+<a href="https://sicstus.sics.se/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">User's Manual</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/sicstus/too_002dspfz.html&amp;body=Feedback%20on%20documentation%20node%20html/sicstus/too_002dspfz.html%20in%20User's%20Manual.">Send feedback on this subject.</a>
+</body>
+</html>

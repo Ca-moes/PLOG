@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 6.7, http://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>4.0.4 Bugs Fixed (SICStus Prolog Release Notes)</title>
+
+<meta name="description" content="4.0.4 Bugs Fixed (SICStus Prolog Release Notes)">
+<meta name="keywords" content="4.0.4 Bugs Fixed (SICStus Prolog Release Notes)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<link href="index.html" rel="start" title="Top">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="4_002e0_002e4-Changes.html" rel="up" title="4.0.4 Changes">
+<link href="4_002e0_002e4-Other-Changes.html" rel="next" title="4.0.4 Other Changes">
+<link href="4_002e0_002e4-New-Features.html" rel="prev" title="4.0.4 New Features">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+
+<body lang="en">
+<span id="g_t4_002e0_002e4-Bugs-Fixed"></span><div class="header">
+<p>
+Next: <a href="4_002e0_002e4-Other-Changes.html" accesskey="n" rel="next">4.0.4 Other Changes</a>, Previous: <a href="4_002e0_002e4-New-Features.html" accesskey="p" rel="prev">4.0.4 New Features</a>, Up: <a href="4_002e0_002e4-Changes.html" accesskey="u" rel="up">4.0.4 Changes</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<hr>
+<span id="Bugs-Fixed-3"></span><h4 class="subsection">14.7.2 Bugs Fixed</h4>
+
+<ul>
+<li> On Windows the result of <code>absolute_file_name/[2,3]</code> would contain
+backslash instead of forward slash if the absolute file name contained
+certain non-ASCII characters. This bug also broke all directory listing
+functions in <code>library(file_systems)</code>, e.g.
+<code>file_systems:file_member_of_directory/[2,3,4]</code>.
+
+</li><li> A change in 4.0.3 caused <code>system3:popen/3</code>,
+<code>system3:shell/[1,2]</code> and <code>system3:system/[1,2]</code> to no
+longer work when the command string contains redirection and other
+special constructs. These predicates now always invoke the system
+shell. 
+
+</li><li> A change in 4.0.3 caused <code>library(sockets)</code> to not accept a lone
+port number as an address. A port number <code><var>Port</var></code> is now
+treated the same as <code>inet('', <var>Port</var>)</code>, as in earlier
+releases. This also broke <code>prologbeans:start/[0,1]</code> when no port
+was specified.
+
+</li><li> A few operators had non-ISO mode operator declarations. This has been
+corrected to match the documentation, the ISO Prolog standard and the
+ISO language mode in SICStus Prolog 3. See <a href="../sicstus/ref_002dsyn_002dops_002dbop.html#ref_002dsyn_002dops_002dbop">Built-in Operators</a> in <cite>the SICStus Prolog Manual</cite>.
+
+<p><strong>Please note</strong>: This is an incompatible change that may cause a
+Prolog program or data to be parsed differently (or not at
+all). However, in practice we expect this to affect little or no
+code. Data written using <code>write_canonical/[1,2]</code> or similar will
+not be affected and will be read back correctly regardless of operator
+declarations.
+</p>
+<p>To preserve the old, incorrect, operator declarations, insert the
+following at the top of your Prolog files:
+</p>
+<div class="example">
+<pre class="example">:- op( 500,  fx,[+,-]).
+:- op( 300, xfx,[mod,rem]).
+</pre></div>
+
+<p>To ensure that the new, correct, operator declarations are in effect also
+in releases predating 4.0.4, insert the following at the top
+of your Prolog files (<strong>please note</strong>: this documentation was
+updated after 4.0.4 to correct the associativity of <code>+</code>, <code>-</code>):
+</p>
+<div class="example">
+<pre class="example">:- op( 200,  fy,[+,-]).
+:- op( 400, yfx,[mod,rem]).
+</pre></div>
+
+</li></ul>
+
+<hr>
+
+
+
+<div class="logo">
+<a href="https://sicstus.sics.se/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">Release Notes</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+<li><a href="4_002e0_002e4-Other-Changes.html" accesskey="n" rel="next">Next</a>
+<li><a href="4_002e0_002e4-New-Features.html" accesskey="p" rel="prev">Previous</a>
+<li><a href="4_002e0_002e4-Changes.html" accesskey="u" rel="up">Up</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/relnotes/4_002e0_002e4-Bugs-Fixed.html&amp;body=Feedback%20on%20documentation%20node%20html/relnotes/4_002e0_002e4-Bugs-Fixed.html%20in%20Release%20Notes.">Send feedback on this subject.</a>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 6.7, http://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>ref-lte-atm (SICStus Prolog)</title>
+
+<meta name="description" content="ref-lte-atm (SICStus Prolog)">
+<meta name="keywords" content="ref-lte-atm (SICStus Prolog)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<link href="index.html" rel="start" title="Top">
+<link href="Predicate-Index.html" rel="index" title="Predicate Index">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="ref_002dlte.html" rel="up" title="ref-lte">
+<link href="ref_002dlte_002danv.html" rel="next" title="ref-lte-anv">
+<link href="ref_002dlte_002dc2t.html" rel="prev" title="ref-lte-c2t">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+
+<body lang="en">
+<span id="ref_002dlte_002datm"></span><div class="header">
+<p>
+Next: <a href="ref_002dlte_002danv.html" accesskey="n" rel="next">ref-lte-anv</a>, Previous: <a href="ref_002dlte_002dc2t.html" accesskey="p" rel="prev">ref-lte-c2t</a>, Up: <a href="ref_002dlte.html" accesskey="u" rel="up">ref-lte</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Predicate-Index.html" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<span id="Atom-Operations"></span><h4 class="subsection">4.8.5 Atom Operations</h4>
+
+
+<span id="index-atom_005flength_002f2-_0028built_002din_0029-1"></span>
+<span id="index-atom_005flength_002f2-_0028built_002din_0029"></span>
+
+<p>To compute <var>Length</var>, the number of characters of the atom <var>Atom</var>, use:
+</p>
+<div class="example">
+<pre class="example">?- <kbd>atom_length(<var>Atom</var>,<var>Length</var>).</kbd>
+</pre></div>
+
+
+<span id="index-atom_005fconcat_002f3-_0028built_002din_0029-1"></span>
+<span id="index-atom_005fconcat_002f3-_0028built_002din_0029"></span>
+
+<p>To concatenate <var>Atom1</var> with <var>Atom2</var> giving <var>Atom12</var>, use
+the following. The predicate can also be used to split a given
+<var>Atom12</var> into two unknown parts:
+</p>
+<div class="example">
+<pre class="example">?- <kbd>atom_concat(<var>Atom1</var>,<var>Atom2</var>,<var>Atom12</var>).</kbd>
+</pre></div>
+
+
+<span id="index-sub_005fatom_002f5-_0028built_002din_0029-1"></span>
+<span id="index-sub_005fatom_002f5-_0028built_002din_0029"></span>
+
+<p>To extract a sub-atom <var>SubAtom</var> from <var>Atom</var>, such that the
+number of characters preceding <var>SubAtom</var> is <var>Before</var>, the
+number of characters after <var>SubAtom</var> is <var>After</var>, and the
+length of <var>SubAtom</var> is <var>Length</var>, use the following. Only
+<var>Atom</var> needs to be instantiated:
+</p>
+<div class="example">
+<pre class="example">?- <kbd>sub_atom(<var>Atom</var>,<var>Before</var>,<var>Length</var>,<var>After</var>,<var>SubAtom</var>).</kbd>
+</pre></div>
+
+
+
+
+
+
+<div class="logo">
+<a href="https://sicstus.sics.se/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">User's Manual</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/sicstus/ref_002dlte_002datm.html&amp;body=Feedback%20on%20documentation%20node%20html/sicstus/ref_002dlte_002datm.html%20in%20User's%20Manual.">Send feedback on this subject.</a>
+</body>
+</html>

@@ -1,0 +1,19 @@
+sicstus-4.6.0 -r %0.bat -a %1 %2 %3 %4 %5 %6 %7 %8 %9
+
+# META_INFO 1
+# FILE: "c:/cygwin64/tmp/build-vm-win-10-vc16-64-build-20200406-120517/srcdir/library/alignments.po"
+# META_INFO END
+version=5 archmask=0x2801b
+xœ¥WMLSAŞ
+‰?•ÄTB
+b"¢éÅˆ‰‡Æƒ†„¤iÒ–GÓ.6^Ğ7.FŠ?G£¨\äàÅãA<˜ˆ
+B<€‰¸Ñ“¾·ómûš,u.Óİ7óíÎ7³³[!”œ¯Tº‚Æå¤-Òëó_+Öo
+Ñ:8Ò8ıo22 4ÆéØ ÔÖ¹?“Ş,P÷Ó|úäİáñÓB4Ñxé¶B‡}5ÃY›òtn®¦ëØ(£ç.6¹ßgW¿y8o–§={HM™Ò;JŒ.–°{œ>édÒÚåı…³Ş'@ï4öÕ§Ô
+¨‚´µ-xv¦û…\¡lgT¹âú¿z=½ÏÅ=DYàw}	¹ß3CI)h±tù±
+Š6Gàœ~@°Ÿ<çÚ—
+\ˆwŞ8ÀpÌ6Rö9TôÓºU/èÜQEÒÊ#$Z¤ÊM×é¶2­Ñ'••ğZ¦ğÃİašL,„
+S–¯ªcÉ„F	)]ÉöhŠÚ×HH÷‹Ü’­Âµh¤dÂ‘)’tâvÌqd:Ïà,Ùî.2Ùo;™Šj&5ò¹ì-9e÷Ù{PFİ‚¦íá<¥c”h~DL±3©)ªh€’Cº¡U©f—9Òt¤ZÜÖ%^xÄİ†×Lc/Ö£²³Ğ.Ñ|Œô0iª'‹WÃÒ÷™R¼‡æ'Yœ°CÂêh‡i¬àøºRVıS÷¿qEr¸yŞÓÁr¿_„’Òàá`¢?—q}(roı}ŠÁg+Ù¬H¥û ¢}Åë/?È"Àpxÿ8Húg‡êK¸_xŸªb8¼(4.èß(ŠÈ-Q øC#ÙuO‚‹îÏb¤¯t*Í>ì@z­:–hñÇ™’qÙm;¶Ó£9Õ÷m™–ÀÂÖ…€%µ*Hl=Àp8åhñ¦”‡S^#|ûÒ²ò‚'Ga<H½Æ+ó‹Q~½Ó§RŒòkrHs=ZÿÂÇµÂÎêçÍísİAş†ó¿\Ç´¼ƒ¤ÁõRÏˆkÄÎ)xÊ«›<Gò<ôöÕp8È‘)À1íıaÆCğûÔ&½?«ßœÀ©§1ïùÅxŠ<j÷pñfT½>¿ÔğñSêíˆ¸ŸÓ8É‡~º¬­âdøqÔ]‘5ÆA~àğ·Äô^öÅ€Ğ[}Ëÿ”õ£
+# META_INFO_SUFFIX 1
+# size="0x443"
+# file="c:/cygwin64/tmp/build-vm-win-10-vc16-64-build-20200406-120517/srcdir/library/alignments.po"
+# META_INFO_SUFFIX END

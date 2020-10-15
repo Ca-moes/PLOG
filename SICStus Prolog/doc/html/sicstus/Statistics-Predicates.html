@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 6.7, http://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Statistics Predicates (SICStus Prolog)</title>
+
+<meta name="description" content="Statistics Predicates (SICStus Prolog)">
+<meta name="keywords" content="Statistics Predicates (SICStus Prolog)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<link href="index.html" rel="start" title="Top">
+<link href="Predicate-Index.html" rel="index" title="Predicate Index">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="lib_002dclpfd.html" rel="up" title="lib-clpfd">
+<link href="Answer-Constraints.html" rel="next" title="Answer Constraints">
+<link href="Enumeration-Predicates.html" rel="prev" title="Enumeration Predicates">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+
+<body lang="en">
+<span id="Statistics-Predicates"></span><div class="header">
+<p>
+Next: <a href="Answer-Constraints.html" accesskey="n" rel="next">Answer Constraints</a>, Previous: <a href="Enumeration-Predicates.html" accesskey="p" rel="prev">Enumeration Predicates</a>, Up: <a href="lib_002dclpfd.html" accesskey="u" rel="up">lib-clpfd</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Predicate-Index.html" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<span id="Statistics-Predicates-1"></span><h4 class="subsection">10.10.6 Statistics Predicates</h4>
+
+<p>The following predicates can be used to access execution statistics.
+</p>
+<dl compact="compact">
+<dt><code>fd_statistics</code></dt>
+<dt><code>fd_statistics(<var>?Key</var>, <var>?Value</var>)</code></dt>
+<dd>
+<span id="index-fd_005fstatistics_002f_005b0_002c2_005d-_0028clpfd_0029-1"></span>
+<span id="index-fd_005fstatistics_002f_005b0_002c2_005d-_0028clpfd_0029"></span>
+
+<p>This allows a program to access execution statistics specific to this
+solver.  General statistics about CPU time and memory consumption etc.
+is available from the built-in predicate <code>statistics/2</code>.
+</p>
+<p>Without arguments, displays on the standard error stream a summary of
+the following statistics, and zeroes all counters.  With arguments, for
+each of the possible keys <var>Key</var>, <var>Value</var> is unified with the
+current value of a counter, which is simultaneously zeroed.  The
+following counters are maintained:
+</p>
+
+<dl compact="compact">
+<dt><code>resumptions</code></dt>
+<dd><span id="index-resumptions-_0028fd_005fstatistics_002f2-option_0029"></span>
+<p>The number of times a constraint was resumed.
+</p>
+</dd>
+<dt><code>entailments</code></dt>
+<dd><span id="index-entailments-_0028fd_005fstatistics_002f2-option_0029"></span>
+<p>The number of times a (dis)entailment was detected by a constraint.
+</p>
+</dd>
+<dt><code>prunings</code></dt>
+<dd><span id="index-prunings-_0028fd_005fstatistics_002f2-option_0029"></span>
+<p>The number of times a domain was pruned.
+</p>
+</dd>
+<dt><code>backtracks</code></dt>
+<dd><span id="index-backtracks-_0028fd_005fstatistics_002f2-option_0029"></span>
+<p>The number of times a contradiction was found by a domain being wiped
+out, or by a global constraint signalling failure.  Other causes of
+backtracking, such as failed Prolog tests, are not covered by this
+counter.
+</p>
+</dd>
+<dt><code>constraints</code></dt>
+<dd><span id="index-constraints-_0028fd_005fstatistics_002f2-option_0029"></span>
+<p>The number of propagators created.
+</p></dd>
+</dl>
+</dd>
+</dl>
+
+
+
+
+<div class="logo">
+<a href="https://sicstus.sics.se/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">User's Manual</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/sicstus/Statistics-Predicates.html&amp;body=Feedback%20on%20documentation%20node%20html/sicstus/Statistics-Predicates.html%20in%20User's%20Manual.">Send feedback on this subject.</a>
+</body>
+</html>

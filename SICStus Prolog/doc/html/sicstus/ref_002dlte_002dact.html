@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 6.7, http://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>ref-lte-act (SICStus Prolog)</title>
+
+<meta name="description" content="ref-lte-act (SICStus Prolog)">
+<meta name="keywords" content="ref-lte-act (SICStus Prolog)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<link href="index.html" rel="start" title="Top">
+<link href="Predicate-Index.html" rel="index" title="Predicate Index">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="ref_002dlte.html" rel="up" title="ref-lte">
+<link href="ref_002dlte_002dacl.html" rel="next" title="ref-lte-acl">
+<link href="ref_002dlte_002dmet_002dusu.html" rel="prev" title="ref-lte-met-usu">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+<link href="texinfo.css" rel="stylesheet" type="text/css">
+</head>
+
+<body lang="en">
+<span id="ref_002dlte_002dact"></span><div class="header">
+<p>
+Next: <a href="ref_002dlte_002dacl.html" accesskey="n" rel="next">ref-lte-acl</a>, Previous: <a href="ref_002dlte_002dmet.html" accesskey="p" rel="prev">ref-lte-met</a>, Up: <a href="ref_002dlte.html" accesskey="u" rel="up">ref-lte</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Predicate-Index.html" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<span id="Analyzing-and-Constructing-Terms"></span><h4 class="subsection">4.8.2 Analyzing and Constructing Terms</h4>
+
+
+<span id="index-functor_002f3-_0028built_002din_0029-1"></span>
+<span id="index-functor_002f3-_0028built_002din_0029"></span>
+
+
+<span id="index-principal-functor"></span>
+<span id="index-functor_002c-principal"></span>
+
+<p>The built-in predicate <code>functor/3</code>:
+</p><ul>
+<li> decomposes a given term into its name and arity, or
+</li><li> given a name and arity, constructs the corresponding compound term
+creating new uninstantiated variables for its arguments.
+</li></ul>
+
+
+<span id="index-arg_002f3-_0028built_002din_0029-1"></span>
+<span id="index-arg_002f3-_0028built_002din_0029"></span>
+
+
+<span id="index-terms_002c-arguments-of"></span>
+<span id="index-arguments-of-terms"></span>
+
+
+<p>The built-in predicate <code>arg/3</code> 
+unifies a term with a specified argument of another term.
+</p>
+
+<span id="index-_003d_002e_002e_002f2-_0028built_002din_0029-1"></span>
+<span id="index-_003d_002e_002e_002f2-_0028built_002din_0029"></span>
+
+
+<p>The built-in predicate <var>Term</var> <code>=..</code> <var>List</var>
+unifies <var>List</var> with a list whose head is the atom corresponding
+to the principal functor of <var>Term</var> and whose tail is a list of
+the arguments of <var>Term</var>.
+</p>
+
+<span id="index-acyclic_005fterm_002f2-_0028built_002din_0029-1"></span>
+<span id="index-acyclic_005fterm_002f2-_0028built_002din_0029"></span>
+
+
+<p>The built-in predicate <code>acyclic_term/2(<var>Term</var>)</code>
+succeeds if and only if <var>Term</var> is finite (acyclic).
+</p>
+
+<span id="index-term_005fvariables_002f2-_0028built_002din_0029-1"></span>
+<span id="index-term_005fvariables_002f2-_0028built_002din_0029"></span>
+
+
+<p>The built-in predicate <code>term_variables(<var>Term</var>,<var>Variables</var>)</code>
+unifies <var>Variables</var> with the set of variables that occur in <var>Term</var>,
+in first occurrence order.
+</p>
+
+
+
+<div class="logo">
+<a href="https://sicstus.sics.se/">
+<table><tr><td>&nbsp;</td></tr></table>
+</a>
+</div>
+<div class="node">
+<ul class="node">
+<li><a href="index.html#Top">User's Manual</a>
+<hr>
+<li><a href="index.html#TOC">Table of Contents</a>
+</ul>
+</div>
+<hr>
+<a HREF="mailto:sicstus-support@sics.se?subject=Documentation%20feedback%20on%20html/sicstus/ref_002dlte_002dact.html&amp;body=Feedback%20on%20documentation%20node%20html/sicstus/ref_002dlte_002dact.html%20in%20User's%20Manual.">Send feedback on this subject.</a>
+</body>
+</html>
