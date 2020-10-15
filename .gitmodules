@@ -1,3 +1,3 @@
 [submodule "feup-plog-proj"]
 	path = feup-plog-proj
-	url = https://github.com/Ca-moes/feup-plog-proj
+	url = git@github.com:Ca-moes/feup-plog-proj.git
