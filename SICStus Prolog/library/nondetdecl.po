@@ -1,12 +1,0 @@
-sicstus-4.6.0 -r %0.bat -a %1 %2 %3 %4 %5 %6 %7 %8 %9
-
-# META_INFO 1
-# FILE: "c:/cygwin64/tmp/build-vm-win-10-vc16-64-build-20200406-120517/srcdir/library/nondetdecl.po"
-# META_INFO END
-version=5 archmask=0x2801b
-xœÝXMlTU~oÄiS(LR´šŽX¬PDššØ•4ºhA#i\´æµŒNçMæ§P7K†ºšÄcµJMŒD¢D7¨‰?@Ü˜˜š#ºP;ï|ß¾Ã¼Ì›•wóåþœïž¿{ïyÏ²¤íîŒ¢Ð^ýéBôêK–uéÃÌøw+ƒãG³²?OÌ9fuåïŠ7JÖÛ1ž}æøØ©ó–µýàƒ)açúnÅs¹¼èaö‚;s‡umÛôÄðžÚü¹å_DËwç¼õlCï®mÓºŒ›I:…¤³?mDbçßö¦HÝÒD®ïV<íšHSè*¶]»~öÖ…Õ—í×‰Æ®ªµšü§§?ÙXãí±Öyc%Ì-tŸ«Íçœ¤3Ê¤23VS4*b›¢_ý@“¿ð(z?–-VŒôúŠ‡&­N-Š[µoÙ3½2(®:„h²ý	Å¨M$¿³Sä˜Ÿý(úQÿ!Ãtd_“V™V’Êp•AÒÑ&—ähßÜ&]!WtL’Pˆº7¬ò­´“À7x~—êçquÜ†u÷™œäø<‘³÷ Ï$Ý=(Ï¸Ì+})ÿjyÆ‚†••…û@¨«×¿rŸØ=äwva>ë˜ô‹;¾ã!ä%«WØíØ{â<’€ÈéãA}<6ÿõ+t<&ž‚°ûL§ÒNÞ°Ý—®GŸRý áðß‰ñËI¹G¸kýêÝ‘M›„¤:!'á;ÝF€LÈØ†	_BÒç¼­É³YYÁ}‚ãáœ o÷ Ä`lub¤ÝDÒIÆgÜDÚ$HõhÑ— Ø$B’“0F'È\Û©xtàhTØyk‹ß8"ù›]-nÖP]¾>ªéC†êË»ýÖ´J5ë&‹i§N½>º¼[Ìí¯ÓÛî÷y«tÉTÎp}´(ÈØ-r™66(¨¯±ÐÞO­rØ÷°p}›d'7;™uó©BÊÍÖþû{ÚdÈrNbq—"Ð7Oºn£pooŽ÷Ý <””ß9>)O¢/‡§d_¹Kú<|rP~Y÷ã6Ó›|‡1ÿš^õÛñæ?Wë˜L¦o1ÿ›ZÇ!ß_˜ïPëþø‹<€B˜Ø‡ù>Èë›ôFÅga°xCãsäŸçàâp“ø°„#ô…Æu#‘b>à¥{Á™7ÜÂæ7}œp—¸•=²½Øð£ÍŠG?püköÀu)ž°¹šÜ+úË]ÚCyíSúáÒ³¯7¨ë÷ü¦¹Æ• öy´£°~ OØ*«ªüPýg©A•eÙ·bË{òñ3@W[8[¦<ß‹ñðE Ë{žU–÷/+ý¹®¬Öåzïˆ`PU×,×je\J;ìÊ×þ`cNÛgÿ]jl–çŠGû`Ø`“'lÒ?d°³Ûú‚M{(OdûNÄ/F¬àÃ0u8/¥:~\HPKfòT÷ÊeçÓÒ7ŸW¹>žr‹<ô'åiGã¶šúÁB{¨ãÇqÝ¨y)§+ž¨âÑñ
-Ë³VñôÃE§È¥³õ©eße£÷¡?Ö­¬=©ó˜ÏFìÛ¬gOÈ³ßHÚIž ¼lÆC;ÉC;+ãù¶ì$þÀ%¶úCï?‰`Ð
-# META_INFO_SUFFIX 1
-# size="0x594"
-# file="c:/cygwin64/tmp/build-vm-win-10-vc16-64-build-20200406-120517/srcdir/library/nondetdecl.po"
-# META_INFO_SUFFIX END
