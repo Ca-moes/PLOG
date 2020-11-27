@@ -191,8 +191,76 @@ count_120([_|Tail], Counter, Return):-
 
 %__________________
 
+% nextPhase(+N, -Participants)
+
+nextPhase(N, Participants):-
+	setof(TT-Id-Perf, eligibleOutcome(Id, Perf, TT), Set),
+	reverse(Set, Set1),
+get_first_N(Set1, 0, N, TempParticipants), reverse(TempParticipants, Participants).
+	
+get_first_N(_, Current, Number, []):-
+	Current == Number.
+get_first_N([Head|Tail], Current, Number, Return):-
+	Current1 is Current+1, 
+	get_first_N(Tail, Current1, Number, TempReturn),
+	append(TempReturn, [Head], Return).
+	
+
 eligibleOutcome(Id,Perf,TT) :-
     performance(Id,Times),
     madeItThrough(Id),
     participant(Id,_,Perf),
     sumlist(Times,TT).
+
+%__________________
+
+/*
+Intenção seria recolher os números de quem tem idade até Q, mas na realidade não funciona.
+
+Cut é verde porque o predicado predX nunca falha. Então não faz efeito.
+*/
+
+%__________________
+
+impoe(X,L) :-
+    length(Mid,X),
+    append(L1,[X|_],L), append(_,[X|Mid],L1).
+
+/*
+Verifica se a Lista L:
+- append(L1,[X|_],L) - Tem uma lista L1 com X no final
+- append(_,[X|Mid],L1) - E essa lista L1 tem um X que está a distancia X para tras do outro X
+*/
+/*
+| ?- impoe(3, [2,3,1,2,1,3]).
+        1      1 Call: impoe(3,[2,3,1,2,1,3]) ? 
+        2      2 Call: length(_2007,3) ? 
+        2      2 Exit: length([_2941,_2945,_2949],3) ? 
+        3      2 Call: append(_2019,[3|_2027],[2,3,1,2,1,3]) ? 
+?       3      2 Exit: append([2],[3,1,2,1,3],[2,3,1,2,1,3]) ? 
+        4      2 Call: append(_2031,[3,_2941,_2945,_2949],[2]) ? 
+        4      2 Fail: append(_2031,[3,_2941,_2945,_2949],[2]) ? 
+        3      2 Redo: append([2],[3,1,2,1,3],[2,3,1,2,1,3]) ? 
+?       3      2 Exit: append([2,3,1,2,1],[3],[2,3,1,2,1,3]) ? 
+        5      2 Call: append(_2031,[3,_2941,_2945,_2949],[2,3,1,2,1]) ? 
+?       5      2 Exit: append([2],[3,1,2,1],[2,3,1,2,1]) ? 
+?       1      1 Exit: impoe(3,[2,3,1,2,1,3]) ? 
+yes
+*/
+
+%__________________
+
+
+% langford(+N,-L)
+
+langford(N, L):-
+	Length is N*2,
+	length(L, Length),
+	langford(N, L, Length).
+
+langford(0, _, _).
+
+langford(N, L, Length) :-
+    impoe(N, L),
+    N1 is N - 1,
+    langford(N1, L, Length).
