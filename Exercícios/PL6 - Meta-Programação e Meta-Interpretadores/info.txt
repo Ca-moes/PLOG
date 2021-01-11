@@ -1,0 +1,18 @@
+https://sicstus.sics.se/sicstus/docs/3.8/html/sicstus_toc.html
+
++Term =.. ?List [ISO]
+?Term =.. +List [ISO]
+List is a list whose head is the atom corresponding to the principal functor of Term, and whose tail is a list of the arguments of Term. e.g.
+
+| ?- product(0, n, n-1) =.. L.
+
+L = [product,0,n,n-1]
+
+| ?- n-1 =.. L.
+
+L = [-,n,1]
+
+| ?- product =.. L.
+
+L = [product]
+If Term is uninstantiated, then List must be instantiated either to a list of determinate length whose head is an atom, or to a list of length 1 whose head is a number. Note that this predicate is not strictly necessary, since its functionality can be provided by arg/3 and functor/3, and using the latter two is usually more efficient.
